@@ -22,12 +22,15 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnStart = New System.Windows.Forms.Button()
         Me.btnQuit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -75,11 +78,21 @@ Partial Class frmMain
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Movie Quiz"
         '
+        'AxWindowsMediaPlayer1
+        '
+        Me.AxWindowsMediaPlayer1.Enabled = True
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(29, 114)
+        Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
+        Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(173, 83)
+        Me.AxWindowsMediaPlayer1.TabIndex = 6
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnQuit)
         Me.Controls.Add(Me.btnStart)
@@ -88,6 +101,7 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.Text = "frmMain"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -98,4 +112,5 @@ Partial Class frmMain
     Friend WithEvents btnStart As Button
     Friend WithEvents btnQuit As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents AxWindowsMediaPlayer1 As AxWMPLib.AxWindowsMediaPlayer
 End Class
