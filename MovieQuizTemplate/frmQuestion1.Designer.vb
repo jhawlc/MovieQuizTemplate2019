@@ -29,6 +29,7 @@ Partial Class frmQuestion1
         Me.btnAnswer3 = New System.Windows.Forms.RadioButton()
         Me.btnAnswer4 = New System.Windows.Forms.RadioButton()
         Me.btnNext = New System.Windows.Forms.Button()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -109,11 +110,19 @@ Partial Class frmQuestion1
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
         '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(91, 411)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(464, 27)
+        Me.ProgressBar1.TabIndex = 7
+        '
         'frmQuestion1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnAnswer4)
         Me.Controls.Add(Me.btnAnswer3)
@@ -136,4 +145,5 @@ Partial Class frmQuestion1
     Friend WithEvents btnAnswer3 As RadioButton
     Friend WithEvents btnAnswer4 As RadioButton
     Friend WithEvents btnNext As Button
+    Friend WithEvents ProgressBar1 As ProgressBar
 End Class
